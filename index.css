@@ -1,0 +1,50 @@
+body{
+    background-color: #313B47;
+    color:lightgray;
+}
+
+.mdl-button--fab.mdl-button--colored{
+    background-color:#006ea0
+}
+
+#main-part p, #main-part .column .label, #main-part .column label,.metrics .train{
+    color:lightgray;
+}
+#main-part .mdl-button .material-icons,#loss-test{
+    color:white
+}
+.output .output-stats .value{
+    color:white
+}
+
+#top-controls {
+    border-bottom: 1px solid #757575;
+}
+
+#top-controls ,#top-controls .control select{
+    background-color: #313B47;
+    color: white;
+}
+
+#top-controls .control label{
+     color: lightgray;
+ }
+
+.data.column .data-thumbnail{
+    border:2px solid #999;
+}
+
+.data.column .data-thumbnail.selected{
+    border:2px solid white;
+}
+
+.bracket{
+    border-top:1px solid #777;
+    /*border-bottom: none;*/
+}
+.axis text{
+    fill:white;
+}
+#network .canvas canvas{
+    border:none
+}

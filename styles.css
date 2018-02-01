@@ -649,7 +649,7 @@ g.column rect {
 
 #network svg .main-label {
   font-size: 13px;
-  fill: #333;
+  fill: #ddd;
   font-weight: 300;
 }
 
@@ -669,7 +669,7 @@ g.column rect {
 }
 
 #network svg .active .main-label {
-  fill: #333
+  fill: #ddd
 }
 
 #network svg #markerArrow {
@@ -962,31 +962,31 @@ footer .links a:hover {
 /* Slider */
 
 #main-part .mdl-slider.is-upgraded {
-  color: #183D4E;
+  color: lightgray;
 }
 
 #main-part .mdl-slider__background-lower {
-  background-color: #183D4E;
+  background-color: lightgray;
 }
 
 #main-part .mdl-slider.is-upgraded::-webkit-slider-thumb {
-  background-color: #183D4E;
+  background-color: lightgray;
 }
 
 #main-part .mdl-slider.is-upgraded::-moz-range-thumb {
-  background-color: #183D4E;
+  background-color: lightgray;
 }
 
 #main-part .mdl-slider.is-upgraded::-ms-thumb {
-  background-color: #183D4E;
+  background-color: lightgray;
 }
 
 #main-part .mdl-slider.is-upgraded.is-lowest-value::-webkit-slider-thumb {
-  border-color: #183D4E;
+  border-color: lightgray;
 }
 
 #main-part .mdl-slider.is-upgraded.is-lowest-value::-moz-range-thumb {
-  border-color: #183D4E;
+  border-color: lightgray;
 }
 /* Keep grey focus circle for non-start values */
 #main-part .mdl-slider.is-upgraded:focus:not(:active)::-webkit-slider-thumb {

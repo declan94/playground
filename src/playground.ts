@@ -172,7 +172,7 @@ let lossTrain = 0;
 let lossTest = 0;
 let player = new Player();
 let lineChart = new AppendingLineChart(d3.select("#linechart"),
-    ["#777", "black"]);
+    ["#aaa", "white"]);
 
 function makeGUI() {
   d3.select("#reset-button").on("click", () => {
@@ -695,9 +695,9 @@ function addPlusMinusControl(x: number, layerIdx: number) {
       .attr("class", "material-icons")
       .text("remove");
 
-  let suffix = state.networkShape[i] > 1 ? "s" : "";
+  // let suffix = state.networkShape[i] > 1 ? "s" : "";
   div.append("div").text(
-    state.networkShape[i] + " neuron" + suffix
+    state.networkShape[i] + "个神经元"
   );
 }
 
@@ -944,8 +944,8 @@ function reset(onStartup=false) {
   }
   player.pause();
 
-  let suffix = state.numHiddenLayers !== 1 ? "s" : "";
-  d3.select("#layers-label").text("Hidden layer" + suffix);
+  // let suffix = state.numHiddenLayers !== 1 ? "s" : "";
+  d3.select("#layers-label").text("层 隐藏层");
   d3.select("#num-layers").text(state.numHiddenLayers);
 
   // Make a simple network.

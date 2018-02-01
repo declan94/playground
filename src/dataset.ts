@@ -204,6 +204,44 @@ export function classifyXORData(numSamples: number, noise: number):
   return points;
 }
 
+export function classifySinX1(numSamples: number, noise: number):
+    Example2D[] {
+  function getSinX1Label(p: Point) { return Math.sin(p.x) >= 0 ? 1 : -1; }
+
+  let points: Example2D[] = [];
+  for (let i = 0; i < numSamples; i++) {
+    let x = randUniform(-5, 5);
+    let padding = 0.3;
+    x += x > 0 ? padding : -padding;  // Padding.
+    let y = randUniform(-5, 5);
+    y += y > 0 ? padding : -padding;
+    let noiseX = randUniform(-5, 5) * noise;
+    let noiseY = randUniform(-5, 5) * noise;
+    let label = getSinX1Label({x: x + noiseX, y: y + noiseY});
+    points.push({x, y, label});
+  }
+  return points;
+}
+
+export function classifySinXor(numSamples: number, noise: number):
+    Example2D[] {
+  function getSinXorLabel(p: Point) { return Math.sin(p.x) * Math.sin(p.y) >= 0 ? 1 : -1; }
+
+  let points: Example2D[] = [];
+  for (let i = 0; i < numSamples; i++) {
+    let x = randUniform(-5, 5);
+    let padding = 0.3;
+    x += x > 0 ? padding : -padding;  // Padding.
+    let y = randUniform(-5, 5);
+    y += y > 0 ? padding : -padding;
+    let noiseX = randUniform(-5, 5) * noise;
+    let noiseY = randUniform(-5, 5) * noise;
+    let label = getSinXorLabel({x: x + noiseX, y: y + noiseY});
+    points.push({x, y, label});
+  }
+  return points;
+}
+
 /**
  * Returns a sample from a uniform [a, b] distribution.
  * Uses the seedrandom library as the random generator.
